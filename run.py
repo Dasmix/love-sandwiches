@@ -35,6 +35,7 @@ def validate_data(values):
     Railses ValueError if strings cannot be converted into int, or if there anre't exactly 6 values
     """
     try:
+        [int(value) for value in values]
         if len(values) != 6:
             raise ValueError(
                 f"Exactly 6 values raquired, you provided {len(values)}"
